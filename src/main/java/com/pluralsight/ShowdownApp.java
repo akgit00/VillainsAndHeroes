@@ -5,8 +5,8 @@ public class ShowdownApp {
     public static void main(String[] args) {
 
         // Create our combatants
-        SuperHero hero = new SuperHero("Jefre (just a regular guy)", 250, 20);
-        SuperVillain villain = new SuperVillain("Batman", 230, 25);
+        SuperHero hero = new SuperHero("Jefre (MTA Demon)", 100, 20);
+        SuperVillain villain = new SuperVillain("Batman", 250, 50);
 
         System.out.println(" Welcome to the Battle Arena! ");
         System.out.println("=====================================");
