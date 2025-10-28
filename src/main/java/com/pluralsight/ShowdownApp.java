@@ -32,7 +32,22 @@ public class ShowdownApp {
             villain.fight(hero);
             System.out.println(hero.getStatus());
 
+            // Check if hero is still alive
+            if (!hero.isAlive()) {
+                System.out.println(hero.getName() + " has fallen!");
+                System.out.println(villain.getName() + " is victorious!");
+                break;
+            }
+
+            // Separate rounds visually
+            System.out.println("=============================\n");
+
+            round++;
+        }
+
+        System.out.println("\nBattle Over!");
+
+
 
         }
     }
-}
