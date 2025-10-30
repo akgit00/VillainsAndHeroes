@@ -46,6 +46,12 @@ public class ShowdownApp {
         }
 
         System.out.println("\nBattle Over!");
+        System.out.println("=====================================");
+
+
+        //print the logs for both
+        hero.printBattleLog();
+        villain.printBattleLog();
 
 
 
