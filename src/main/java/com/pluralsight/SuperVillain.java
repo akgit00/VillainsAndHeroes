@@ -36,6 +36,9 @@ public class SuperVillain extends SuperPerson {
             //apply damage to the opponent
             opponent.takeDamage(totalDamage);
 
+            //this is to log the hit(s) landed
+            this.logHit(opponent);
+
             //villains can steal experience points from their victims if they're still alive
             if (opponent.isAlive()) {
                 int stolenXP = rand.nextInt(6); //steal no more than 5 XP
