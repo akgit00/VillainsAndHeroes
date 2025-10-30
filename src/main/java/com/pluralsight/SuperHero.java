@@ -33,6 +33,9 @@ public class SuperHero extends SuperPerson{
 
             //actually cause the damage to the opponent
             opponent.takeDamage(totalDamage);
+
+            //this is to log the hit(s) landed
+            this.logHit(opponent);
         }
 
     }
