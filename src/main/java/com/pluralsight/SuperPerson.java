@@ -1,4 +1,5 @@
 package com.pluralsight;
+import java.util.HashMap;
 
 public class SuperPerson {
 
@@ -6,6 +7,10 @@ public class SuperPerson {
     protected String name;
     protected int health;
     protected int experiencePoints;
+
+    //battle log for tracking hits on opponents
+    private HashMap<String, Integer> battleLog = new HashMap<>();
+
 
     //the constructor to help create an instance of our Super Person
     public SuperPerson(String name, int health) {
