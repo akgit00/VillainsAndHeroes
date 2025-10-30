@@ -18,6 +18,25 @@ public class SuperPerson {
         this.health = health;
     }
 
+    //this method is for updating the log entry for a SuperPerson
+    public void logHit(SuperPerson opponent) {
+        String opponentName = opponent.name;
+        int count = battleLog.getOrDefault(opponentName, 0);
+        battleLog.put(opponentName, count + 1);
+    }
+
+    //this method is for printing the battle log
+    public void printBattleLog() {
+        System.out.println("\n Battle log for " + name + ":");
+        if (battleLog.isEmpty()) {
+            System.out.println(" - No hits recorded yet.");
+        } else {
+            for (HashMap.Entry<String, Integer> entry : battleLog.entrySet()) {
+                System.out.println(" - Hit " + entry.getKey() + ": " + entry.getValue() + " times");
+            }
+        }
+    }
+
     //method to determine if this SuperPerson is alive
     public boolean isAlive(){
         //how can I determine if this thing is alive
